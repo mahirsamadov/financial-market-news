@@ -1,0 +1,1 @@
+export const machineIp:string = window.location.hostname;

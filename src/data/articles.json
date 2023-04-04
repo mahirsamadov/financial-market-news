@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "headline": "Stock Market Rebounds After Fed Announces Interest Rate Cut",
+      "summary": "The stock market rallied today after the Federal Reserve announced a surprise interest rate cut.",
+      "analysis": "This news is likely to boost investor confidence and lead to increased investment in the stock market.",
+      "link": "https://www.wsj.com/articles/stock-market-rebounds-after-fed-announces-interest-rate-cut-1234567890"
+    },
+    {
+      "id": 2,
+      "headline": "Tech Giants Face Antitrust Probe",
+      "summary": "Several tech giants, including Amazon and Facebook, are facing an antitrust probe by the US government.",
+      "analysis": "This could lead to increased regulatory scrutiny of the tech industry and potentially impact the stock prices of these companies.",
+      "link": "https://www.nytimes.com/2023/04/01/technology/antitrust-tech-probe.html"
+    },
+    {
+      "id": 3,
+      "headline": "Oil Prices Surge After Middle East Tensions Escalate",
+      "summary": "Oil prices rose sharply today after tensions between several Middle Eastern countries escalated.",
+      "analysis": "This could lead to increased volatility in the oil markets and potentially impact the global economy.",
+      "link": "https://www.reuters.com/article/us-mideast-crisis-oil/oil-prices-rise-as-middle-east-tensions-escalate-idUSKBN1X10XJ"
+    }
+  ]
+  
