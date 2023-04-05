@@ -8,8 +8,9 @@ import { uid } from 'uid'
 export const DetailsPage = () => {
 
     const {id} = useParams() 
-   const newsResponse = useLoaderData() as NewsResponse
-    const article = newsResponse.articles.find((article:Article) => article.title === id)
+   const articles = useLoaderData() as Article[]
+   
+    const article = articles.find((article:Article) => article.title === id)
 
   return (
     !!article ?

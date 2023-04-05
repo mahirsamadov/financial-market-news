@@ -6,7 +6,8 @@ import { Article, NewsResponse, SkeletonAnimation } from "../models";
 import { Skeletons } from "../UI/Skeleton";
 
 export const IndexPage = () => {
-  const newsResponse = useLoaderData() as NewsResponse;
+  const articles = useLoaderData() as Article[];
+  console.log("Wt",articles);
   const navigation = useNavigation();
 
   if (navigation.state === "loading")
@@ -16,9 +17,9 @@ export const IndexPage = () => {
       </>
     );
 
-  return !!newsResponse?.articles?.length ? (
+  return !!articles?.length ? (
     <Box className=" articles p-4 min-h-[100%] bg-gray-800 text-gray-100 grid grid-cols-4">
-      {newsResponse.articles.map((article: Article) => {
+      {articles.map((article: Article) => {
         return (
           <Stack style={{backgroundImage: `url(${article.urlToImage})`}} key={uid()} className="m-4 rounded-md overflow-hidden">
             <Link  className="bg-black h-full opacity-50 p-2 bg-cover  text-white hover:bg-cyan-950 hover:text-gray-400" to={`details/${article.title}`}>
