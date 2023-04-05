@@ -17,12 +17,12 @@ export const IndexPage = () => {
     );
 
   return !!newsResponse?.articles?.length ? (
-    <Box className="articles p-4 min-h-[100%] bg-gray-800 text-gray-100 flex flex-col items-center justify-start">
+    <Box className=" articles p-4 min-h-[100%] bg-gray-800 text-gray-100 grid grid-cols-6">
       {newsResponse.articles.map((article: Article) => {
         return (
           <Stack key={uid()} className="m-4">
             <Link
-              className="bg-cyan-900 p-2 rounded-md text-white w-[90vw] hover:bg-cyan-950 hover:text-gray-400"
+              className="bg-cyan-900 p-2 rounded-md text-white hover:bg-cyan-950 hover:text-gray-400"
               to={`details/${article.title}`}
             >
               {article.title}
