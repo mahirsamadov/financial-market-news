@@ -1,10 +1,11 @@
 import axios from "axios";
-import { machineIp } from "../config";
+import { API_KEY, machineIP } from "../config";
 
-const baseURL = `http://${machineIp}:5173/src/data/`;
+
+
+const baseURL = `https://newsapi.org/v2/`;
 
 export const instance = axios.create({
     baseURL,
-    timeout: 1000,
   });
 

@@ -1,21 +1,23 @@
 import { useContext, useEffect } from 'react'
 import { useParams, useLoaderData } from 'react-router-dom'
-import { Link } from '@mui/material'
-import { Article } from '../models'
+import { Box, Link, Typography } from '@mui/material'
+import { Article, NewsResponse } from '../models'
+import { uid } from 'uid'
 
 
 export const DetailsPage = () => {
 
     const {id} = useParams() 
-   const articles = useLoaderData() as Article[]
-    const article = articles.find((article:Article) => article.id === Number(id))
+   const newsResponse = useLoaderData() as NewsResponse
+    const article = newsResponse.articles.find((article:Article) => article.title === id)
 
   return (
-    <div key={article?.id} className="p-4 h-[100vh] bg-gray-800 text-gray-100 overflow-hidden break-words">
-        <h1>{article?.headline}</h1>
-        <p>{article?.analysis}</p>
-        <p>{article?.summary}</p>
-        <Link href={article?.link} target='_blank'>{article?.link}</Link>
-    </div>
+    !!article ?
+     <Box key={uid()} className="p-4 h-[100vh] bg-gray-800 text-gray-100 overflow-hidden break-words">
+        <Typography variant='h3' className='p-4' component='div'>{article?.title}</Typography>
+        <img src={article?.urlToImage} alt={article?.title} className='w-[100%] h-[50vh] object-cover'/>
+        <Typography variant='h4' className='p-4'>{article?.description}</Typography>
+        <Typography className='p-4' fontSize='1.2rem'style={{fontWeight: 200}} component='p'>{article?.content}</Typography>
+    </Box> : <Typography>Error</Typography>
   )
 }

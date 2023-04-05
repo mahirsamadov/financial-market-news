@@ -7,8 +7,8 @@ interface FooterProps {
 
 export const Footer:FC<FooterProps> = ({info}:FooterProps) => {
   return (
-    <Box className='p-4 bg-gray-500'>
-        <Typography variant="body2" color="text.secondary" align="center">
+    <Box className='p-4 bg-cyan-900 '>
+        <Typography className='text-gray-400' variant="body2" align="center">
             {info}
         </Typography>
     </Box>
