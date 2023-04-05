@@ -12,7 +12,7 @@ export const IndexPage = () => {
   if (navigation.state === "loading")
     return (
       <>
-        <Skeletons number={100} animation={SkeletonAnimation.Wave} />
+        <Skeletons number={50} animation={SkeletonAnimation.Wave} />
       </>
     );
 

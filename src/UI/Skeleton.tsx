@@ -1,4 +1,4 @@
-import { Skeleton } from '@mui/material'
+import { Skeleton, Box } from '@mui/material'
 import { ISkeletion } from '../models'
 import React from 'react'
 
@@ -9,9 +9,9 @@ export const Skeletons = ({number, animation}: ISkeletion) => {
     
         const divs = [];
         for (let i = 0; i < number; i++) {
-          divs.push(<Skeleton key={i} animation={'wave'}/>);
+          divs.push(<Skeleton key={i} animation={animation}/>);
         }
-        return <>{divs}</>;
+        return <Box className='flex flex-col gap-2 h-full items-center '>{divs}</Box>;
       
       
 
