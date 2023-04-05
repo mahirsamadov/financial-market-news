@@ -21,10 +21,8 @@ export const IndexPage = () => {
       {newsResponse.articles.map((article: Article) => {
         return (
           <Stack key={uid()} className="m-4">
-            <Link
-              className="bg-cyan-900 p-2 rounded-md text-white hover:bg-cyan-950 hover:text-gray-400"
-              to={`details/${article.title}`}
-            >
+            <Link style={{backgroundImage: `url(${article.urlToImage})`}} className="bg-cyan-900 p-2 rounded-md text-white hover:bg-cyan-950 hover:text-gray-400" to={`details/${article.title}`}>
+            
               {article.title}
             </Link>
           </Stack>
