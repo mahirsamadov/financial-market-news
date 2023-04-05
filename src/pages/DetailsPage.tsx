@@ -14,7 +14,7 @@ export const DetailsPage = () => {
 
   return (
     !!article ?
-     <Box key={uid()} className="p-4 h-[100vh] bg-gray-800 text-gray-100 overflow-hidden break-words">
+     <Box key={uid()} className="p-4 min-h-[100vh] bg-gray-800 text-gray-100 break-words">
         <Typography variant='h3' className='p-4' component='div'>{article?.title}</Typography>
         <img src={article?.urlToImage} alt={article?.title} className='w-[100%] h-[50vh] object-cover'/>
         <Typography variant='h4' className='p-4'>{article?.description}</Typography>
