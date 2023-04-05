@@ -11,7 +11,7 @@ export const Skeletons = ({number, animation}: ISkeletion) => {
         for (let i = 0; i < number; i++) {
           divs.push(<Skeleton key={i} animation={animation}/>);
         }
-        return <Box className='flex flex-col gap-2 h-full items-center '>{divs}</Box>;
+        return <Box>{divs}</Box>;
       
       
 
